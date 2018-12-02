@@ -1,0 +1,105 @@
+.crassh {
+  --initial-level-0: calc(1vh + 1% + 1px + 1em + 1vw + 1cm);
+  /* разнородная константа */
+
+  --level-1: calc(var(--initial-level-0) + var(--initial-level-0));
+  /* 2 вычисления          */
+
+  --level-2: calc(var(--level-1) + var(--level-1));
+  /* 4 вычисления          */
+
+  --level-3: calc(var(--level-2) + var(--level-2));
+  /* 8 вычислений          */
+
+  --level-4: calc(var(--level-3) + var(--level-3));
+  /* 16 вычислений         */
+
+  --level-5: calc(var(--level-4) + var(--level-4));
+  /* 32 вычисления         */
+
+  --level-6: calc(var(--level-5) + var(--level-5));
+  /* 64 вычисления         */
+
+  --level-7: calc(var(--level-6) + var(--level-6));
+  /* 128 вычислений        */
+
+  --level-8: calc(var(--level-7) + var(--level-7));
+  /* 256 вычислений        */
+
+  --level-9: calc(var(--level-8) + var(--level-8));
+  /* 512 вычислений        */
+
+  --level-10: calc(var(--level-9) + var(--level-9));
+  /* 1024 вычисления       */
+
+  --level-11: calc(var(--level-10) + var(--level-10));
+  /* 2048 вычислений       */
+
+  --level-12: calc(var(--level-11) + var(--level-11));
+  /* 4096 вычислений       */
+
+  --level-13: calc(var(--level-12) + var(--level-12));
+  /* 8192 вычисления       */
+
+  --level-14: calc(var(--level-13) + var(--level-13));
+  /* 16384 вычисления      */
+
+  --level-15: calc(var(--level-14) + var(--level-14));
+  /* 32768 вычислений      */
+
+  --level-16: calc(var(--level-15) + var(--level-15));
+  /* 65536 вычислений      */
+
+  --level-17: calc(var(--level-16) + var(--level-16));
+  /* 131072 вычисления     */
+
+  --level-18: calc(var(--level-17) + var(--level-17));
+  /* 262144 вычисления     */
+
+  --level-19: calc(var(--level-18) + var(--level-18));
+  /* 524288 вычислений     */
+
+  --level-20: calc(var(--level-19) + var(--level-19));
+  /* 1048576 вычислений    */
+
+  --level-21: calc(var(--level-20) + var(--level-20));
+  /* 2097152 вычисления    */
+
+  --level-22: calc(var(--level-21) + var(--level-21));
+  /* 4194304 вычисления    */
+
+  --level-23: calc(var(--level-22) + var(--level-22));
+  /* 8388608 вычислений    */
+
+  --level-24: calc(var(--level-23) + var(--level-23));
+  /* 16777216 вычислений   */
+
+  --level-25: calc(var(--level-24) + var(--level-24));
+  /* 33554432 вычисления   */
+
+  --level-26: calc(var(--level-25) + var(--level-25));
+  /* 67108864 вычисления   */
+
+  --level-27: calc(var(--level-26) + var(--level-26));
+  /* 134217728 вычислений  */
+
+  --level-28: calc(var(--level-27) + var(--level-27));
+  /* 268435456 вычислений  */
+
+  --level-29: calc(var(--level-28) + var(--level-28));
+  /* 536870912 вычисления  */
+
+  --level-30: calc(var(--level-29) + var(--level-29));
+  /* 1073741824 вычисления */
+
+  --level-final: calc(var(--level-30) + 1px);
+  /* 1073741824 вычисления */
+
+
+    /* ^ на некоторых движках это не вычисляется автоматически -> нужно их где-то использовать             */
+
+    border-width: var(--level-final);  /* <- применяем рассчитанное значение   */
+
+    /* некоторые движки могут пропустить border-width, если нет style (= пропущено ) */
+    border-style: solid;
+}
